@@ -1,6 +1,7 @@
 package org.typecasting;
 
 public class Test {
+	int sum=10895;
 	
 	public static void main(String[] args) {
 		int i=2599;
@@ -18,7 +19,7 @@ public class Test {
 		int s=4;
 		System.out.println((float)s);
 		System.out.println(i);
-		
+		System.out.println(new Test().sum);
 		
 		
 	}
