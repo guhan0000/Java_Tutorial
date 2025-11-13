@@ -34,9 +34,20 @@ public class ArrayListDemi {
 		
 		Iterator iterator=list.iterator();
 		while (iterator.hasNext()) {
-			System.out.print(iterator.next()+" ");;
+			System.out.print(iterator.next()+"");;
+			
 			
 		}
+		System.out.println();
+		
+		List list2=Arrays.asList(1,2,2,3,4,3,5);
+		System.out.println(list2);
+//		list2.remove();
+		System.out.println(list2);
+		
+		System.out.println(list2.lastIndexOf(2));
+		int lastIndexOf = list2.lastIndexOf(2);
+		list2.remove(lastIndexOf);
 		
 
 		
