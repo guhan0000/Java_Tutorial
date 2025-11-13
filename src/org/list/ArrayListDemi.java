@@ -43,12 +43,15 @@ public class ArrayListDemi {
 		List list2=Arrays.asList(1,2,2,3,4,3,5);
 		System.out.println(list2);
 //		list2.remove();
+//		System.out.println(list2);
+		
+//		System.out.println(list2.lastIndexOf(2));
+		List list3= Arrays.asList(1,2,3);
+//		list2.retainAll(list3);
 		System.out.println(list2);
-		
-		System.out.println(list2.lastIndexOf(2));
-		int lastIndexOf = list2.lastIndexOf(2);
-		list2.remove(lastIndexOf);
-		
+//		System.out.println(list3);
+		boolean equals = list3.equals(list2);
+		System.out.println(equals);
 
 		
 	}
