@@ -1,0 +1,12 @@
+package strings;
+
+public class FrequencyOfEachCharacters {
+	
+	public static void main(String[] args) {
+		String string="    Hello world         ";
+		System.out.println(string.length());
+		System.out.println(string.trim());
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+package strings;
+
+import java.util.Arrays;
+
+//Input:  "Java is very easy"
+//Output: 4
+
+public class NumberOfWordsCount {
+	public static void main(String[] args) {
+		String str="Java is very easy";
+		String[] split = str.split(" ");
+		System.out.println(Arrays.toString(split));
+	}
+
+}

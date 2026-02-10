@@ -1,0 +1,11 @@
+package strings;
+//Input:  "JaVa123"
+//Output: "jAvA123"
+public class CaseConversion {
+	public static void main(String[] args) {
+		String str="JaVa123";
+		char ch='a';
+		System.out.println((int)ch);
+	}
+
+}

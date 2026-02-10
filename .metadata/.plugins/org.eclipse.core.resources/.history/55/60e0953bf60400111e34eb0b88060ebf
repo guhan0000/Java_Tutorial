@@ -1,0 +1,18 @@
+package primenos;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		int num=1000;
+		int base=1;
+		int sum=0;
+		while(num!=0) {
+			int rem=num%10;
+			sum=sum+(base*rem);
+			base*=2;
+			num/=10;
+		}
+		System.out.println(sum);
+	}
+
+}

@@ -1,0 +1,29 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+public class Main implements Serializable {
+	
+	public static void main(String[] args) {
+		
+		User user=new User();
+		user.setUserName("maxPower123");
+		user.setPassword("Qwerty~123");
+		System.out.println(user.getUserName()+" "+user.getPassword()
+		);
+		try {
+			
+			FileOutputStream fileOutputStream = new FileOutputStream("UserInfo.ser");
+			ObjectOutputStream objectOutputStream=new ObjectOutputStream(fileOutputStream);
+			objectOutputStream.writeObject(user);
+			objectOutputStream.close();
+			fileOutputStream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

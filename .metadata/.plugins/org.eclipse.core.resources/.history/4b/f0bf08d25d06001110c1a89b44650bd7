@@ -1,0 +1,47 @@
+package strings;
+import java.util.*;
+public class Test {
+	static int hashCount(String string) {
+		int hashCount=0;
+		for(char ch:string.toCharArray()) {
+			if(ch=='#') {
+				hashCount++;
+			}
+		}
+		return hashCount;
+	}
+	static int atCount(String string) {
+		int atCount=0;
+		for(char ch:string.toCharArray()) {
+			if(ch=='@') {
+				atCount++;
+			}
+		}
+		return atCount;
+	}
+	static String replaceHashByDollar(String str) {
+		StringBuilder result=new StringBuilder();
+		for(char ch:str.toCharArray()) {
+			if(ch=='#') {
+				result.append('@');
+			}
+			else {
+				result.append(ch);
+			}
+		}
+		return result.toString();
+	}
+	
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter String");
+		String string=scanner.next();
+		System.out.println(string);
+		System.out.println(hashCount(string));
+		System.out.println(atCount(string));
+		System.out.println(replaceHashByDollar(string));
+		
+		
+	}
+
+}

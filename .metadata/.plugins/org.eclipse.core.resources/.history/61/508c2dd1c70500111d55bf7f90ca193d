@@ -1,0 +1,14 @@
+package strings;
+
+public class FrequencyOfEachCharacters {
+	
+	public static void main(String[] args) {
+		String string="malayalam";
+		int count[]=new int[26];
+		char[] charArray = string.toCharArray();
+		for(char ch:charArray) {
+			count[ch-'a']++;
+		}
+	}
+
+}

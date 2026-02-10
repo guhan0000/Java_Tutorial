@@ -1,0 +1,23 @@
+package strings;
+
+import java.util.Arrays;
+
+//Input:  "programming"
+//Output: "progamin"
+public class RemoveDuplicateChar {
+	public static void main(String[] args) {
+		String str="programming";
+		boolean seen[]=new boolean[26];
+		StringBuilder result=new StringBuilder();
+//		System.out.println(Arrays.toString(seen));
+		for(char ch:str.toCharArray()) {
+			if(!seen[ch-'a']) {
+				seen[ch-'a']=true;
+				result.append(ch);
+				
+			}
+		}
+		System.out.println(result.getClass());
+	}
+
+}

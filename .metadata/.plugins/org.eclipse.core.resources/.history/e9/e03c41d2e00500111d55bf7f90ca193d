@@ -1,0 +1,6 @@
+package strings;
+//Input:  "programming"
+//Output: "progamin"
+public class RemoveDuplicateChar {
+
+}

@@ -1,0 +1,20 @@
+import java.io.Serializable;
+
+public class User implements Serializable {
+	
+	private String unameString;
+	private String pwdString;
+	public String getUnameString() {
+		return unameString;
+	}
+//	public void setUnameString(String unameString) {
+//		this.unameString = unameString;
+//	}
+	public String getPwdString() {
+		return pwdString;
+	}
+//	public void setPwdString(String pwdString) {
+//		this.pwdString = pwdString;
+//	}
+
+}

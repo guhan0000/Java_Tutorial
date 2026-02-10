@@ -1,0 +1,16 @@
+package primenos;
+
+public class Test {
+	static String decimalToBinary(int dec) {
+		String bin="";
+		while(dec>0) {
+			bin=(dec%2)+bin;
+			dec/=2;
+		}
+		return bin;
+	}
+	public static void main(String[] args) {
+		
+	}
+
+}

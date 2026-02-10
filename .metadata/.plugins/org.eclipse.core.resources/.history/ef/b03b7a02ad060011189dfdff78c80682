@@ -1,0 +1,55 @@
+package org.fileclass;
+import java.io.*;
+public class FileDemo {
+	
+	public static void main(String[] args) throws IOException {
+		File file = new File("/home/guhan/git/Java_Tutorial/Java/React.txt");
+		System.out.println(file.createNewFile());
+//		
+	//	System.out.println("parent "+f1.getParent());
+//		System.out.println(f2.delete());
+//		System.out.println(f2.exists());
+//		System.out.println(f1.mkdirs());
+		//System.out.println(f1.length());
+//		System.out.println("path"+f2.getPath());
+//		System.out.println("Abs path"+f1.getAbsolutePath());
+		//System.out.println(file.delete());
+		File fg=new File("D:/Eclipse_workspace/FileHandlingDemo/Java/Sample.txt");
+		
+ //	File sec_file=new File("D:/Eclipse_workspace/FileHandlingDemo/Java/s.txt");
+ //	File xl=new File("D:\\Eclipse_workspace\\FileHandlingDemo\\Java\\guhan.xlsx");	
+		//System.out.println(sec_file.createNewFile());
+//		System.out.println("Name "+sec_file.getName());
+//		System.out.println("Parent "+sec_file.getParent());
+//		System.out.println("Path "+sec_file.getPath());
+//		System.out.println("Path "+sec_file.getAbsolutePath());
+//		System.out.println(sec_file.isDirectory());
+//		System.out.println(sec_file.isFile());
+//		System.out.println(sec_file.canExecute());
+//		System.out.println(sec_file.canRead());
+//		System.out.println(sec_file.canWrite());
+//		System.out.println(sec_file.length());
+//		System.out.println(sec_file.exists());
+//		String name = sec_file.getName();
+//		System.out.println(name);
+//		xl.createNewFile();
+//		//sec_file.compareTo("D:/Eclipse_workspace/FileHandlingDemo/Java/Sample.txt");
+//		boolean equals = sec_file.equals(fg);
+//		System.out.println(equals);
+		//System.out.println(fg.compareTo(sec_file));
+//	File folder=new File("D:/Eclipse_workspace/FileHandlingDemo/Java");
+//	String[] list = folder.list();
+//	File[] listFiles = folder.listFiles();
+//	for(File f:listFiles)
+//	{
+//		System.out.println(f);
+//	}
+//	for(String s:list)
+//	{
+//		System.out.println(s);
+//	}
+//	System.out.println(folder.getName());	
+		
+	}
+
+}

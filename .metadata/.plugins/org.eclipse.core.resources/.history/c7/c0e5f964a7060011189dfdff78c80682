@@ -1,0 +1,21 @@
+package org.fileclass;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReding {
+	
+	public static void main(String[] args) throws IOException {
+		String file="//home//guhan//Desktop//jstest.tt";
+		new File(file).mkdirs();
+		BufferedReader reader=new BufferedReader(new FileReader(file));
+		String line;
+		while((line=reader.readLine())!=null)
+		{
+			System.out.println(reader.readLine());
+		}
+	}
+
+}

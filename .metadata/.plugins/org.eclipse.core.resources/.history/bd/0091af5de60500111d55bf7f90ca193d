@@ -1,0 +1,7 @@
+package strings;
+//Input:  "Java is very easy"
+//Output: 4
+
+public class NumberOfWordsCount {
+
+}

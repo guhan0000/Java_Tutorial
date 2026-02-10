@@ -1,0 +1,24 @@
+package strings;
+//Input:  "JaVa123"
+//Output: "jAvA123"
+public class CaseConversion {
+	public static void main(String[] args) {
+		String str="JaVa123";
+		StringBuilder result=new StringBuilder();
+//		char ch='a';
+//		System.out.println((char)((int)ch-32));
+		for(char ch:str.toCharArray()) {
+			if(ch>='a' && ch<='z'|| ch>='A' && ch<='Z') {
+				result.append((char)((int)ch-32));
+			}
+			else {
+				result.append(ch);
+			}
+		}
+		for(int i=0;i<str.length();i++) {
+			
+		}
+		
+	}
+
+}
