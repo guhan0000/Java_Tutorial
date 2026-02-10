@@ -3,8 +3,9 @@ import java.io.*;
 public class FileDemo {
 	
 	public static void main(String[] args) throws IOException {
-	//	File file = new File("D:/Eclipse_workspace/FileHandlingDemo/Java");
-//		System.out.println(file.mkdir());
+		File file = new File("/home/guhan/git/Java_Tutorial/Java/React.txt");
+		System.out.println(file.createNewFile());
+		System.out.println(file.getName());
 //		
 	//	System.out.println("parent "+f1.getParent());
 //		System.out.println(f2.delete());
@@ -16,8 +17,8 @@ public class FileDemo {
 		//System.out.println(file.delete());
 		File fg=new File("D:/Eclipse_workspace/FileHandlingDemo/Java/Sample.txt");
 		
-	File sec_file=new File("D:/Eclipse_workspace/FileHandlingDemo/Java/s.txt");
-	File xl=new File("D:\\Eclipse_workspace\\FileHandlingDemo\\Java\\guhan.xlsx");	
+ //	File sec_file=new File("D:/Eclipse_workspace/FileHandlingDemo/Java/s.txt");
+ //	File xl=new File("D:\\Eclipse_workspace\\FileHandlingDemo\\Java\\guhan.xlsx");	
 		//System.out.println(sec_file.createNewFile());
 //		System.out.println("Name "+sec_file.getName());
 //		System.out.println("Parent "+sec_file.getParent());
@@ -37,8 +38,8 @@ public class FileDemo {
 //		boolean equals = sec_file.equals(fg);
 //		System.out.println(equals);
 		//System.out.println(fg.compareTo(sec_file));
-	File folder=new File("D:/Eclipse_workspace/FileHandlingDemo/Java");
-	String[] list = folder.list();
+//	File folder=new File("D:/Eclipse_workspace/FileHandlingDemo/Java");
+//	String[] list = folder.list();
 //	File[] listFiles = folder.listFiles();
 //	for(File f:listFiles)
 //	{
@@ -48,7 +49,7 @@ public class FileDemo {
 //	{
 //		System.out.println(s);
 //	}
-	System.out.println(folder.getName());	
+//	System.out.println(folder.getName());	
 		
 	}
 

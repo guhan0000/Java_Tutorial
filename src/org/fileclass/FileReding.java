@@ -8,7 +8,7 @@ import java.io.IOException;
 public class FileReding {
 	
 	public static void main(String[] args) throws IOException {
-		String file="D:/GUHAN_PRGMR/guhan.txt";
+		String file="//home//guhan//Desktop//jstest.txt";
 		new File(file).mkdirs();
 		BufferedReader reader=new BufferedReader(new FileReader(file));
 		String line;
