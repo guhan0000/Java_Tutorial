@@ -52,7 +52,54 @@ public class ArrayListDemi {
 //		System.out.println(list3);
 		boolean equals = list3.equals(list2);
 		System.out.println(equals);
-
+//		revision on feb12 26
+		System.out.println("*****************************************\n");
+//		CREATE
+		List<String> cars=new ArrayList<String>();
+		
+		cars.add("baleno");
+		cars.add("creta");
+		cars.add("fortuner");
+		cars.add("ertiga");
+		cars.add("baleno");
+		System.out.println(cars.indexOf("baleno"));//0
+		System.out.println(cars.lastIndexOf("baleno"));//4
+		System.out.println(cars);
+		
+//		READ
+		String car0 = cars.get(0);
+		System.out.println(car0);//[baleno, creta, fortuner]
+		
+//		UPDATE
+		cars.add(0,"innova");// value in 0th index moved to 1st
+		System.out.println(cars);//[innova, baleno, creta, fortuner]
+		cars.set(0, "Swift");// value in 0th index is replaced by Swift
+		System.out.println(cars);// [Swift, baleno, creta, fortuner]
+		
+//		DELETE
+		cars.remove(0);// remove using index
+		System.out.println(cars);// [baleno, creta, fortuner]
+		cars.remove("baleno"); //removes using objects
+		System.out.println(cars);// [creta, fortuner]
+// 		cars.clear(); // empties the list
+		System.out.println(cars);// []
+		boolean empty = cars.isEmpty();
+		System.out.println(empty);
+		
+		List<String>seats=new ArrayList<String>();
+		seats.add("5");
+		seats.add("7");
+		cars.addAll(0,seats);// add at 0th index
+		System.out.println(cars);
+		cars.addAll(seats);// append to the end of the list
+		System.out.println(cars);// [creta, fortuner, 5, 7]
+		System.out.println(seats);//[5, 7]
+		boolean containsAll = cars.containsAll(seats);
+		System.out.println(containsAll);// true
+		cars.removeAll(seats); // removes all the seat objects in cars
+		System.out.println(cars);//[creta, fortuner]
+		
+		
 		
 	}
 
