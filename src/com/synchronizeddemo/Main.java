@@ -1,7 +1,10 @@
 package com.synchronizeddemo;
+
+import java.awt.geom.Point2D;
+
 class Table
 {
-	void printTable(int num) throws InterruptedException
+ synchronized void printTable(int num) throws InterruptedException
 	{
 		for(int i=1;i<=10;i++)
 		{
@@ -15,10 +18,10 @@ public class Main {
 
 		public static void main(String[] args) throws InterruptedException {
 			Table table=new Table();
-			table.printTable(2);
+//			table.printTable(2);
+			
 			Thread.yield();
-			Thread t1=new Thread()
-			{
+			Thread t1=new Thread()	{
 				public void run()
 				{
 					try {
@@ -30,6 +33,18 @@ public class Main {
 				}
 				
 			};
+			Thread t2= new Thread() {
+				public void run() {
+					try {
+						table.printTable(5);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			};
 			t1.start();
+			t2.start();
+			
 		}
 }
