@@ -1,6 +1,7 @@
 package com.java8.stream_api;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -54,5 +55,34 @@ public class StreamDemo2 {
 			  .distinct()
 			  .sorted()
 			  .forEach(System.out::println);
+		System.out.println("************************************");
+		
+//		peek
+		List<Integer> squaredList = Arrays.stream(arr)
+			  .distinct()
+			  .peek(System.out::println)
+			  .sorted()
+			  .map(n->n*n)
+			  .peek(System.out::println)
+			  .boxed()
+			  .toList();
+		System.out.println(squaredList);
+		
+		String fruits[]= {"apple","kiwi","cherry","mango"};
+		List<String> sortedFruits = Stream.of(fruits)
+			  .sorted(Comparator.comparingInt(String::length).reversed())
+			  .toList();
+		System.out.println(sortedFruits);
+		System.out.println("**********************************");
+//		skip skip 1st n elements
+		sortedFruits.stream()
+		.skip(2)
+		.forEach(System.out::println);
+		
+		System.out.println("************************************");
+//		limit keep the 1st n elements remove the rest
+		sortedFruits.stream()
+		.limit(2)
+		.forEach(System.out::println);
 	}
 }

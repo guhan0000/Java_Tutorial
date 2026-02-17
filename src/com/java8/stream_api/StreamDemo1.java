@@ -1,6 +1,7 @@
 package com.java8.stream_api;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -8,7 +9,7 @@ public class StreamDemo1 {
 	public static void main(String[] args) {
 		List<Integer>list=Arrays.asList(11,5,1,3,7,8,2,6,4);
 		list.stream()
-			.sorted()
+			.sorted(Comparator.reverseOrder())
 			.forEach(n->System.out.println(n));
 		System.out.println("**********************");
 		
