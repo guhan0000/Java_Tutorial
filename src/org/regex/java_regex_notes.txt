@@ -1,0 +1,94 @@
+JAVA REGEX ESSENTIALS
+
+1. WHAT IS REGEX?
+
+Regex (Regular Expression) is a pattern used to match character
+combinations in strings.
+
+In Java, regex is handled by: - java.util.regex.Pattern -
+java.util.regex.Matcher - String built-in regex methods
+
+2. BASIC REGEX SYNTAX
+
+Character Classes: . -> Any character except newline [abc] -> a OR b OR
+c [^abc] -> Not a, b, c [a-z] -> Lowercase letters [A-Z] -> Uppercase
+letters [0-9] -> Digits > Digit -> Non-digit -> Word character
+(a-zA-Z0-9_) -> Non-word character -> Whitespace -> Non-whitespace
+
+Note: In Java, always escape backslash: “\d” not “
+
+3. QUANTIFIERS
+
+-      -> 0 or more
+
+-      -> 1 or more
+
+    ? -> 0 or 1 {n} -> Exactly n times {n,} -> n or more {n,m} ->
+    Between n and m
+
+Example: “\d+” -> One or more digits
+
+4. ANCHORS
+
+^ -> Start of string $ -> End of string
+
+Example: “^\d{10}$” -> Exactly 10 digits
+
+5. USING REGEX IN JAVA
+
+Using String.matches(): String s = “12345”;
+System.out.println(s.matches(“\d+”));
+
+Using Pattern & Matcher: Pattern p = Pattern.compile(“\d+”); Matcher m =
+p.matcher(“abc123xyz”); while(m.find()) { System.out.println(m.group());
+}
+
+6. REAL-LIFE REGEX PATTERNS
+
+Email (basic): [1]+@[A-Za-z0-9.-]+$
+
+Indian Mobile Number: [2]\d{9}$
+
+Password (min 8 chars, 1 upper, 1 lower, 1 digit):
+^(?=.[a-z])(?=.[A-Z])(?=.*\d).{8,}$
+
+7. GROUPING & CAPTURING
+
+(\d{2})-(\d{2})-(\d{4})
+
+Access groups: m.group(1); m.group(2); m.group(3);
+
+8. LOOKAHEAD
+
+Positive Lookahead: (?=.*\d)
+
+Used in password validation.
+
+9. REPLACE USING REGEX
+
+String s = “abc123xyz”; String result = s.replaceAll(“\d”, ““);
+
+10. SPLIT USING REGEX
+
+String s = “apple,banana;grape”; String[] arr = s.split(“[,;]”);
+
+11. COMMON INTERVIEW PATTERNS
+
+Remove Special Characters: [^a-zA-Z0-9]
+
+Check Only Alphabets: [3]+$
+
+Find Repeated Characters: (.)\1
+
+12. IMPORTANT TIPS
+
+-   matches() -> Full string match
+-   find() -> Partial match
+-   Always double escape backslash
+-   Use Pattern.compile() if used repeatedly
+
+[1] A-Za-z0-9+_.-
+
+[2] 6-9
+
+[3] a-zA-Z
