@@ -7,23 +7,21 @@ import java.util.regex.Pattern;
 public class RegexTask {
 	
 	public static LocalDate testDate(String date) {
-		if( Pattern.matches("^\\d{4}-\\d{2}-\\d{2}$",date)) {
-			try {
-				return LocalDate.of(Integer.parseInt(date.substring(0,4)),Integer.parseInt(date.substring(5,7)),Integer.parseInt(date.substring(8)));
-			}catch(Exception e) {
-				System.out.println("Invalid Date");
-			}
+		if( !Pattern.matches("^\\d{4}-\\d{2}-\\d{2}$",date)) {
+			throw new IllegalArgumentException("Invalid Date");		  
+			
 		}
-		else {
-			System.out.println("invalid date");
+		try {
+			return LocalDate.of(Integer.parseInt(date.substring(0,4)),Integer.parseInt(date.substring(5,7)),Integer.parseInt(date.substring(8)));
+		}catch(IllegalArgumentException e) {
+			throw new IllegalArgumentException("Invalid Date value");
 		}
-		return null;
 	}
+	
 	public static String testEmpName(String name)  {
 		 
 			 if(!Pattern.matches("^[A-Z][a-z]+\\s[A-Z][a-z]+$",name)) {
-					System.out.println("Invalid Name");
-					name=null;
+					throw new IllegalArgumentException("Invalid Name");
 				 }
 			
 		 return name;
@@ -31,26 +29,30 @@ public class RegexTask {
 	}
 	public static String testEmpDept(String dept) {
 		if(!Pattern.matches("^(HR|IT|SALES)$",dept)) {
-			System.out.println("Invalid Dept");
-			dept=null;
+			throw new IllegalArgumentException("Invalid Dept");
 		}
 		return dept;
 	}
 	
 	public static void main(String[] args) {
-		
 		Scanner scanner=new Scanner(System.in);
-		System.out.println("Enter date of joining (yyyy-mm-dd)");
-		String date=scanner.nextLine();
-//		System.out.println(testDate(date));
-		System.out.println("enter emp name");
-		String name=scanner.nextLine();
-//		System.out.println(testEmpName(name));
-		System.out.println("entet department");
-		String dept=scanner.nextLine();
-		Employee employee=new Employee(testEmpName(name),testEmpDept(dept),testDate(date),0);
-		System.out.println(employee.getEmpDept());
-		
+		try {
+			
+			
+			System.out.println("Enter date of joining (yyyy-mm-dd)");
+			LocalDate date=testDate(scanner.nextLine());
+//			System.out.println();
+			System.out.println("enter emp name");
+			String name=testEmpName(scanner.nextLine());
+//			System.out.println(testEmpName(name));
+			System.out.println("entet department");
+			String dept=testEmpDept(scanner.nextLine());
+			Employee employee=new Employee(name,dept,null,0);
+			System.out.println(employee.getEmpDept());
+			
+		}catch(IllegalArgumentException e) {
+			System.out.println(e.getMessage());
+		}
 		
 //		LocalDate of = LocalDate.of(Integer.parseInt(date.substring(0,4)),Integer.parseInt(date.substring(5,7)),Integer.parseInt(date.substring(8)));
 		}
