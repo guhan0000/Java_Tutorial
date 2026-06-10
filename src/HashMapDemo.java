@@ -10,7 +10,14 @@ public class HashMapDemo {
 		empid.put("Raghul", 684);
 		empid.put("Guhan",123);
 		empid.put("vasanth", 681);
-	System.out.println(empid.containsKey("vasanth"));	
+		// multiple null values allowed
+		empid.put("John", null); 
+		empid.put("Arthur", null);
+		empid.put("Frank", null);
+		empid.put(null, 100);
+		empid.put(null, 500);
+//		one null key allowed
+		System.out.println(empid.containsKey("vasanth"));	
 		System.out.println(empid.get("Guhan"));
 	System.out.println(empid.containsKey("Guhan"));	
 	empid.remove("vasanth");

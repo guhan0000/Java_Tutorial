@@ -98,9 +98,13 @@ public class ArrayListDemi {
 		System.out.println(containsAll);// true
 		cars.removeAll(seats); // removes all the seat objects in cars
 		System.out.println(cars);//[creta, fortuner]
-		
-		
-		
+		Collections.reverse(cars);
+		System.out.println(cars);
+		String max = Collections.max(cars);
+		System.out.println(max);
+		List<String> cars2=Arrays.asList("baleno");
+		boolean retainAll = cars.retainAll(cars2);
+		System.out.println(cars);
 	}
 
 }

@@ -3,13 +3,15 @@ import java.util.*;
 public class SetDemo
 {
 	public static void main(String[] args) {
-		TreeSet set=new TreeSet();
+		TreeSet<Object> set=new TreeSet();
 		set.add(10);
 		set.add(3);
 		set.add(5);
 		set.add(7);
+		
 		System.out.println(set);
 		System.out.println(set.first());
+		System.out.println(set.last());
 		Iterator<Object> iterator= set.iterator();
 		while (iterator.hasNext()) {
 			System.out.println(iterator.next());
@@ -25,6 +27,13 @@ public class SetDemo
 		while(iterator2.hasNext()) {
 			System.out.println(iterator2.next());
 		}
+		Collection<String> carCollection= Arrays.asList("creta","Baleno","safari","harrier","ertiga","innova");
+		Set<String> carSet=new TreeSet<>();
+		System.out.println(carCollection);
+		carSet.addAll(carCollection);
+		carSet.add("City");
+		System.out.println(carSet);
+		
 		
 	}
 }

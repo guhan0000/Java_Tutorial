@@ -1,3 +1,4 @@
+import java.util.Hashtable;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -23,7 +24,14 @@ public class MapDemo {
 			System.out.print(values+" ");
 		}
 		
-
+		Map<Integer, String> map2=new Hashtable<>();
+		map2.put(1, "guhan");
+		map2.put(2, "naresh");
+//		map2.put(null, null); not allowed
+//		map2.put(3, null); not allowed
+//		map2.put(null, "raghul"); not allowed
+//		no null key and value allowed
+		System.out.println(map2);
 	}
 
 }

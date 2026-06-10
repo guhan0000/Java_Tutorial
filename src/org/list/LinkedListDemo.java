@@ -15,7 +15,7 @@ public class LinkedListDemo {
 		System.out.println(list);
 		System.out.println(list2);
 		System.out.println(equals);
-		list.ge
+		
 	}
 
 }
