@@ -103,8 +103,25 @@ public class ArrayListDemi {
 		String max = Collections.max(cars);
 		System.out.println(max);
 		List<String> cars2=Arrays.asList("baleno");
-		boolean retainAll = cars.retainAll(cars2);
+//		boolean retainAll = cars.retainAll(cars2);
 		System.out.println(cars);
+		Iterator<String> iterator2=cars.iterator();
+		while (iterator2.hasNext()) {
+			if(iterator2.next().equals("ertiga")) {
+				iterator2.remove();
+			}
+			
+		}
+//		for(String car:cars) {
+//			if(car.equals("ertiga")) {
+//				
+//			}
+//				
+//		}
+		System.out.println(cars);
+		
+		Comparable<>;
+		Comparator<T>
 	}
 
 }
