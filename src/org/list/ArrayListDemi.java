@@ -119,9 +119,11 @@ public class ArrayListDemi {
 //				
 //		}
 		System.out.println(cars);
+//		
+////		Comparable<>;
+////		Comparator<T>
+//		Iterable<T>
 		
-		Comparable<>;
-		Comparator<T>
 	}
 
 }
