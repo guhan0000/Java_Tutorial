@@ -10,6 +10,9 @@ public class Company {
 		// TODO Auto-generated method stub
 		System.out.println("G Technology Services");
 	}
+	private void companyAddress() {
+		System.out.println("OMR chennai");
+	}
 	
 }
 

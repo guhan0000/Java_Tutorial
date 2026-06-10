@@ -22,5 +22,8 @@ public class Employees extends Company {
 		System.out.println(e1.comp_city);
 		
 	}
+	private void companyAddress() {
+		
+	}
 
 }
