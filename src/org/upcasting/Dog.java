@@ -16,8 +16,8 @@ public class Dog  extends Animal{
 	}
 	public static void main(String[] args) {
 		Dog myDog=new Dog();
-//		myDog.makeSound();
-//		myDog.guard();
+		myDog.makeSound();
+		myDog.guard();
 //		---------------------------
 		Animal myAnimal=new Dog();//upcasting
 		myAnimal.makeSound();
